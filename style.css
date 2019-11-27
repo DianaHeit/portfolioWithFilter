@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: inline-flex;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+
+/* MY STYLE starts here */
+
+h1, h2, h3, h4, p, nav, footer, #myBtnContainer, span {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+span {
+  font-size: 2rem;
+}
+
+h1, h2, span {
+  text-transform: lowercase;
+  letter-spacing: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: crosshair;
+}
+
+button, .btn, #myBtnContainer{
+  cursor: crosshair;
+}
+
+p {
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 0 3rem;
+}
+
+.button-centered {
+  border: 4px solid #000;
+  color: #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+/* CURTAIN menu */
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  text-transform: lowercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  font-size: 60px;
+}
+
+@media screen and (min-height: 750px){
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+
+    left: 48vw;
+
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* flex projects  */
+/*
+content {
+  width: 33%;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+@media screen and (max-height: 1000px){
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content{
+
+    width: 100%;
+}
+ */
+
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 33.3%; /* IE10 */
+  flex: 33.3%;
+  max-width: 33.3%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+img {
+    height: 240px;
+    max-width: 300px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+@media screen and (max-width: 500px) {
+  img {
+      height: 200px;
+  }
+  main {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img {
+      height: 260px;
+  }
+  main {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  img {
+      height: 240px;
+  }
+  main {
+    padding: 0 10px;
+  }
+}

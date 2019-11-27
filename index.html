@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+
+  <title>Diana Heit</title>
+
+</head>
+
+<body>
+
+
+  <header>
+
+    <!-- ++++++ -->
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Skills</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Hire Me</a>
+          </div>
+        </div>
+    <!-- ++++++ -->
+
+    <nav>
+      <span onclick="openNav()">&#9776; menu</span>
+    </nav>
+
+    <a href="index.html">
+      <h1 id="nav-heading">Diana Heit</h1>
+      <h2>Web Developer\UX Designer</h2>
+    </a>
+
+    <!-- <nav>
+      <a href="index.html">Skills</a>
+      <a href="#pre-bio">Bio</a>
+      <a href="#pre-contact">Contact</a>
+      <a href="https://github.com/DianaHeit?tab=repositories">GitHub Repositories</a>
+      <a href="edu.html">Education</a>
+    </nav> -->
+
+  </header>
+
+  <main>
+
+<div class="project-box">
+
+    <h2>PORTFOLIO</h2>
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> All My Projects</button>
+      <button class="btn" onclick="filterSelection('htmlcss')"> HTML & CSS</button>
+      <button class="btn" onclick="filterSelection('jsjquery')"> JavaScript & jQuery</button>
+      <button class="btn" onclick="filterSelection('php')"> PHP & WordPress Dev</button>
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column htmlcss">
+        <div class="content">
+          <img src="images/realestate.jpg" alt="Mountains" style="width:100%">
+          <h4>Real Estate UI</h4>
+          <p>I coded this beautiful, responsive UI from scratch <br>using Bootstrap & flexbox.</p><br>
+          <p>
+            <a href="https://dianaheit.github.io/realEstateUI/index.html" class="button-centered">Live</a>
+            <a href="https://github.com/DianaHeit/realEstateUI" class="button-centered">Repo</a>
+          </p>
+        </div>
+      </div>
+      <div class="column htmlcss">
+        <div class="content">
+          <img src="images/comingsoon.jpg" alt="Lights" style="width:100%">
+          <h4>Another HTML+CSS PROJECT</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <div class="column htmlcss">
+        <div class="content">
+          <img src="images/tinyhouses.jpg" alt="htmlcss" style="width:100%">
+          <h4>Tiny Houses</h4>
+          <p>I adapted an existing WP Theme with custom CSS.</p>
+        </div>
+      </div>
+
+      <div class="column jsjquery">
+        <div class="content">
+          <img src="images/runes.jpg" alt="jsjquery" style="width:100%">
+          <h4>Rune Reading</h4>
+          <p>Different values are assigned to 6 different runes. Then 2 random runes are drawn & their values are compared to each other. JavaScript.</p>
+        </div>
+      </div>
+      <div class="column jsjquery">
+        <div class="content">
+          <img src="images/runenRateSpielScreenshot.jpg" alt="jsjquery" style="width:100%">
+          <h4>Rune-Guessing Game</h4>
+          <p>I created a rune-guessing game from scratch. The runic artwork is mine, too. JavaScript.</p>
+        </div>
+      </div>
+      <div class="column jsjquery">
+        <div class="content">
+          <img src="images/zentralgelbScreenshot.jpg" alt="jsjquery" style="width:100%">
+          <h4>zentralgelb.com</h4>
+          <p>I coded the website of zentralgelb.com from scratch, using bootstrap modals to display movies & pictures. jQuery & JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="column php">
+        <div class="content">
+          <img src="images/bloodeagle.jpg" alt="php" style="width:100%">
+          <h4>Theme "BloodEagle"</h4>
+          <p>My first WP theme, messy & glorious, <br>including a custom post type.</p>
+        </div>
+      </div>
+      <div class="column php">
+        <div class="content">
+          <img src="images/comingsoon.jpg" alt="php" style="width:100%">
+          <h4>PHP / WP PROJECT</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <div class="column php">
+        <div class="content">
+          <img src="images/comingsoon.jpg" alt="php" style="width:100%">
+          <h4>PHP / WP PROJECT</h4>
+          <p>...</p>
+        </div>
+      </div>
+      <!-- END GRID -->
+    </div>
+
+</div>
+
+
+  </main>
+
+
+  <footer>
+    <a href="https://www.dianaheit.com">DianaHeit.com</a>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>
